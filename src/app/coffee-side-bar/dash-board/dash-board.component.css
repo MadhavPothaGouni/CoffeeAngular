@@ -1,0 +1,28 @@
+.DashBoard {
+  background-color: #1f2229;
+  height: 100vh;
+  background-size: cover;
+}
+.DashBoard {
+  display: flex;
+  justify-content: center;
+  padding-left: 250px;
+
+}
+.General {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #a7b1c2;
+  font-weight: bold;
+}
+.Technical{
+  margin-left: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #a7b1c2;
+  font-weight: bold;
+} 
