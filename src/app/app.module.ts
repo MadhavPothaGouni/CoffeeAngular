@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { CoffeeHeaderComponent } from './coffee-header/coffee-header.component';
 import { CoffeeSideBarComponent } from './coffee-side-bar/coffee-side-bar.component';
 import { DashBoardComponent } from './coffee-side-bar/dash-board/dash-board.component';
+import { RightSideBarComponent } from './right-side-bar/right-side-bar.component';
+import { SecondrightsidebarComponent } from './secondrightsidebar/secondrightsidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoffeeHeaderComponent,
     CoffeeSideBarComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    RightSideBarComponent,
+    SecondrightsidebarComponent
   ],
   imports: [
     BrowserModule,

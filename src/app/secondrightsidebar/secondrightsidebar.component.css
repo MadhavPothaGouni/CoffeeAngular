@@ -1,0 +1,68 @@
+.signInOverlayContentmodal {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #1f2229;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  border-left: 2px solid #505b69;
+}
+.centerInmodal {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  border-bottom: 1.5px solid white;
+  padding-left: 10px;
+  background-color: #466173;
+}
+.centerInmodal h4 {
+  color: #add8e6;
+}
+.fa-xmark {
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  padding-right: 10px;
+}
+.sub-gridmodal {
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.group {
+  display: flex;
+  align-items: center;
+  border: solid 1.5px #466173;
+  height: 30px;
+  width: 500px;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.root {
+  display: flex;
+  align-items: center;
+  border: solid 1.5px #466173;
+  height: 30px;
+  width: 480px;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.all {
+  font-size: 15px;
+  background-color: #40434a;
+  padding: 15px;
+  color: white;
+  border: none;
+  background-color: #2e353f !important;
+  border: 2px solid;
+  border-color: #4f5967;
+}

@@ -1,3 +1,18 @@
-<app-coffee-side-bar></app-coffee-side-bar>
-<app-coffee-header></app-coffee-header>
-<app-dash-board></app-dash-board>
+<div class="main-layout">
+    <app-coffee-side-bar *ngIf="isSidebarOpen"></app-coffee-side-bar>
+    <div class="content" [class.full-width]="!isSidebarOpen">
+        <app-coffee-header (toggle)="toggleSidebar()" 
+        (openRight)="ForRigthSideBar()" (onpin)="ForSecondRigthSide()"></app-coffee-header>
+        <app-dash-board></app-dash-board>
+    </div>
+    <div *ngIf="isRightBar" class="overlay" (click)="isRightBar=false">
+        <div class="right-sidebar" (click)="$event.stopPropagation()">
+            <app-right-side-bar (onclosebutton)="closeRightBar()"></app-right-side-bar>
+        </div>
+      </div>
+      <div *ngIf="issecondSidebarOpen" class="overlay" (click)="issecondSidebarOpen=false">
+        <div class="right-sidebar" (click)="$event.stopPropagation()">
+        <app-secondrightsidebar (oncancel)="forSecondright()"></app-secondrightsidebar>
+        </div>
+      </div>
+</div>

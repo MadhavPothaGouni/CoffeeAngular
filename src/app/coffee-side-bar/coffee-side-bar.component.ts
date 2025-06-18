@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'app-coffee-side-bar',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './coffee-side-bar.component.css'
 })
 export class CoffeeSideBarComponent {
-
+  
 }

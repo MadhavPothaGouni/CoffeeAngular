@@ -1,0 +1,61 @@
+.signInOverlayContent {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #1f2229;
+  overflow-x: hidden;
+  transition: 0.3s ease-in-out;
+  border-left: 2px solid #505b69;
+}
+.centerIn {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 15px;
+  justify-content: space-between;
+}
+.centerIn-close {
+  border: 1.5px solid;
+  padding: 10px;
+  color: white;
+  background-color: #2e353f;
+  border-radius: 2px;
+}
+.centerIn-close:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.sub-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  margin-top: 10px;
+}
+.one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #505b69;
+  padding: 20px;
+  border-bottom: 1.5px solid grey;
+  cursor: pointer;
+}
+.apply {
+  margin: 20px;
+}
+.fa-xmark {
+  font-size: 30px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  padding-right: 10px;
+}
+.fa-chevron-down {
+  color: white;
+  font-size: 17px;
+}

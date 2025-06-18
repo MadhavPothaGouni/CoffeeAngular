@@ -21,15 +21,13 @@ img {
   height: 100%;
   width: 230px;
   position: fixed;
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  top: 0; 
   left: 0;
   background-color: #1f2229;
   overflow-x: scroll;
+  overflow-x: hidden;
   padding-top: 20px;
-  transition: 0.5s;
 }
-
 .sidenav a {
   padding: 15px;
   text-decoration: none;

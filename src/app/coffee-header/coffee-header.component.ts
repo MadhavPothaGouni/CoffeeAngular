@@ -1,5 +1,4 @@
-import { Component, Output } from '@angular/core';
-import { EventEmitter } from 'stream';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-coffee-header',
@@ -8,8 +7,16 @@ import { EventEmitter } from 'stream';
   styleUrl: './coffee-header.component.css'
 })
 export class CoffeeHeaderComponent {
-  // @Output() toggle = new EventEmitter<void>()
+  @Output() toggle = new EventEmitter<void>();
+  @Output() openRight = new EventEmitter<void>();
+  @Output() onpin = new EventEmitter<void>();
   OnBar(){
-    // this.toggle.emit()
+    this.toggle.emit()
+  }
+  OnFilter(){
+    this.openRight.emit()
+  }
+  onPin(){
+    this.onpin.emit();
   }
 }
