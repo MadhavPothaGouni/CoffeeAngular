@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dash-board',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './dash-board.component.css'
 })
 export class DashBoardComponent {
-
+ 
 }

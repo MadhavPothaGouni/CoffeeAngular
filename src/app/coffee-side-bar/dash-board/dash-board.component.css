@@ -1,13 +1,12 @@
 .DashBoard {
-  background-color: #1f2229;
-  height: 100vh;
-  background-size: cover;
-}
-.DashBoard {
   display: flex;
   justify-content: center;
   padding-left: 60px;
-
+  background-color: #1f2229;
+}
+.active{
+  border: 1px solid #4f5967;
+  border-bottom: none;
 }
 .General {
   padding: 10px;
@@ -17,7 +16,7 @@
   color: #a7b1c2;
   font-weight: bold;
 }
-.Technical{
+.Technical {
   margin-left: 20px;
   padding: 10px;
   padding-left: 20px;
@@ -25,9 +24,4 @@
   text-decoration: none;
   color: #a7b1c2;
   font-weight: bold;
-} 
-.full-width {
-  margin-left: 0; 
-  width: 100%;
-  transition: margin 0.3s ease;
 }

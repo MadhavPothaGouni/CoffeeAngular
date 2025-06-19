@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-coffee-side-bar',
@@ -7,5 +7,9 @@ import { Component, HostBinding, Input } from '@angular/core';
   styleUrl: './coffee-side-bar.component.css'
 })
 export class CoffeeSideBarComponent {
-  
+  @Output() dashboard = new EventEmitter<void>()
+
+  DashBoard(){
+    this.dashboard.emit()
+  }
 }

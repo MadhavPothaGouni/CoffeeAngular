@@ -3,7 +3,8 @@
     <div class="content" [class.full-width]="!isSidebarOpen">
         <app-coffee-header (toggle)="toggleSidebar()" 
         (openRight)="ForRigthSideBar()" (onpin)="ForSecondRigthSide()"></app-coffee-header>
-        <app-dash-board></app-dash-board>
+        <!-- <app-dash-board></app-dash-board> -->
+        <router-outlet></router-outlet>
     </div>
     <div *ngIf="isRightBar" class="overlay" (click)="isRightBar=false">
         <div class="right-sidebar" (click)="$event.stopPropagation()">
