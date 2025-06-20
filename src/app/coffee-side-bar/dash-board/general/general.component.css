@@ -4,7 +4,10 @@
   background-color: #1f2229;
   background-size: cover;
 }
-
+.fa-solid{
+  padding-left: 5px;
+  cursor: pointer;
+}
 .full-width {
   margin-left: 0;
   width: 100%;

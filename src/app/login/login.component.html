@@ -1,0 +1,45 @@
+<!-- <div class="login-container">
+  <h2 style="color: red;">Login</h2>
+  <input type="text" placeholder="Username" [(ngModel)]="username" />
+  <input type="password" placeholder="Password" [(ngModel)]="password" />
+  <button (click)="onLogin()">Login</button>
+  <p *ngIf="loginFailed" style="color: red">Invalid Bro</p>
+</div> -->
+<div class="login">
+  <div class="loginImageAndcred">
+    <img
+      src="http://www.qoffeetech.com/new/wp-content/uploads/2019/05/coffeecloud.png"
+      alt="CoffeeCloud-image"
+      class="coffeecloud-image"
+    />
+    <h1 class="tm">CoffeeCloud™</h1>
+    <div class="crediatials">
+      <div class="foremail">
+        <label for="email" class="email">Email</label>
+        <input
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="username"
+          id="email"
+        />
+      </div>
+      <div class="forpassword">
+        <label for="password" class="password">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="password"
+          id="password"
+        />
+      </div>
+      <div class="remember">
+        <input type="checkbox" id="rem" />
+        <label for="rem" class="me">Remember Me ?</label>
+      </div>
+      <button (click)="onLogin()">Sign In</button>
+    </div>
+    <div class="forgot">
+      <p>Forgot password?</p>
+    </div>
+  </div>
+</div>

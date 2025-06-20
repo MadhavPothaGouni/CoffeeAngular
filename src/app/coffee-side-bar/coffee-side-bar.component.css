@@ -3,11 +3,23 @@ img {
   height: 20%;
   width: 110%;
 }
-.active{
-  background-color: #fff;
+.fa-solid{
+  padding-right: 15px;
 }
-.active:hover{
-  background-color: #fff;
+.fa-regular{
+  padding-right: 15px;
+}
+
+.fa-brands{
+  padding-right: 15px;
+}
+.trans{
+  cursor: pointer;
+}
+.active{
+  background-color: #40434a;
+  cursor: pointer;
+  color: #fff !important;
 }
 .coffecloud-image {
   position: relative;
@@ -56,9 +68,15 @@ a {
 
 .space {
   display: flex;
-  margin-left: 30px;
-  margin-top: 50px;
+  justify-content: space-around;
   color: #7384b0;
+  margin-top: 25px;
+}
+.space p{
+  padding-left: 10px;
+}
+.fa-gear{
+  padding-right: 13px;
 }
 .line {
   border-bottom: 2px solid white;

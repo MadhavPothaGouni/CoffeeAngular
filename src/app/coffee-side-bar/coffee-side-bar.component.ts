@@ -7,9 +7,5 @@ import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/co
   styleUrl: './coffee-side-bar.component.css'
 })
 export class CoffeeSideBarComponent {
-  @Output() dashboard = new EventEmitter<void>()
-
-  DashBoard(){
-    this.dashboard.emit()
-  }
+ 
 }

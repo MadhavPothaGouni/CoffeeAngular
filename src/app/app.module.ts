@@ -15,22 +15,43 @@ import { SecondrightsidebarComponent } from './secondrightsidebar/secondrightsid
 import { RouterModule, Routes } from '@angular/router';
 import { GeneralComponent } from './coffee-side-bar/dash-board/general/general.component';
 import { TechnicalComponent } from './coffee-side-bar/dash-board/technical/technical.component';
+import { LoginComponent } from './login/login.component';
+import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
+import { AuthGuard } from './auth.guard';
+import { FormsModule } from '@angular/forms';
 const appRoutes: Routes = [
   {
     path: '',
-    component: DashBoardComponent,
-    children: [
-      {
-        path: 'general',
-        component: GeneralComponent,
-      },
-      {
-        path: 'technical',
-        component: TechnicalComponent
-      }
-    ],
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'coffeecloud',
+    component: AppLayoutComponent,
+    children:[
+      {
+        path: 'dashboard',
+        component: DashBoardComponent,
+        children:[
+          {
+            path: 'general',
+            component: GeneralComponent
+          },
+          {
+            path: 'technical',
+            component: TechnicalComponent
+          }
+        ]
+      }
+    ]
+  },
+  
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,9 +62,17 @@ const appRoutes: Routes = [
     SecondrightsidebarComponent,
     GeneralComponent,
     TechnicalComponent,
+    LoginComponent,
+    AppLayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+// { path: '', redirectTo: 'general', pathMatch: 'full' },
