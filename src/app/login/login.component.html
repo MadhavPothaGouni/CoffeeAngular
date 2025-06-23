@@ -1,10 +1,3 @@
-<!-- <div class="login-container">
-  <h2 style="color: red;">Login</h2>
-  <input type="text" placeholder="Username" [(ngModel)]="username" />
-  <input type="password" placeholder="Password" [(ngModel)]="password" />
-  <button (click)="onLogin()">Login</button>
-  <p *ngIf="loginFailed" style="color: red">Invalid Bro</p>
-</div> -->
 <div class="login">
   <div class="loginImageAndcred">
     <img
@@ -41,5 +34,13 @@
     <div class="forgot">
       <p>Forgot password?</p>
     </div>
+  </div>
+</div>
+<!-- closemodal -->
+<div class="modal-overlay" *ngIf="loginFailed" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <i class="fa-regular fa-circle-xmark"></i>
+    <p class="modalpara">The username and password entered do not match.</p>
+    <button (click)="closeModal()" class="Modal-button">OK</button>
   </div>
 </div>

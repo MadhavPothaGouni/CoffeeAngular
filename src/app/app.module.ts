@@ -15,10 +15,11 @@ import { SecondrightsidebarComponent } from './secondrightsidebar/secondrightsid
 import { RouterModule, Routes } from '@angular/router';
 import { GeneralComponent } from './coffee-side-bar/dash-board/general/general.component';
 import { TechnicalComponent } from './coffee-side-bar/dash-board/technical/technical.component';
-import { LoginComponent } from './login/login.component';
 import { AppLayoutComponent } from './layout/app-layout/app-layout.component';
 import { AuthGuard } from './auth.guard';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [
   {
     path: '',
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
         path: 'dashboard',
         component: DashBoardComponent,
         children:[
-          {
+          { 
             path: 'general',
             component: GeneralComponent
           },
@@ -49,6 +50,10 @@ const appRoutes: Routes = [
       }
     ]
   },
+  {
+    path: 'logout',
+    component: LoginComponent
+  }
   
 ];
 
@@ -68,6 +73,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
   ],
@@ -75,4 +81,3 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-// { path: '', redirectTo: 'general', pathMatch: 'full' },

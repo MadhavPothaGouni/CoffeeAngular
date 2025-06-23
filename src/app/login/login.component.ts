@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { AuthserviceService } from '../authservice.service';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthserviceService } from '../authservice.service';
 
 @Component({
   selector: 'app-login',
@@ -16,11 +16,18 @@ export class LoginComponent {
   constructor(private authService: AuthserviceService, private router: Router) {}
 
   onLogin() {
-    const success = this.authService.login(this.username, this.password);
-    if (success) {
-      this.router.navigate(['/coffeecloud']);
-    } else {
-      this.loginFailed = true;
-    }
+    this.authService.login(this.username, this.password).subscribe({
+      next: () => {
+        this.router.navigate(['/coffeecloud']);
+      },
+      error: (err) => {
+        console.error('Login failed', err);
+        this.loginFailed = true;
+      }
+    });
   }
+  closeModal() {
+    this.loginFailed = false;
+  }
+  
 }
