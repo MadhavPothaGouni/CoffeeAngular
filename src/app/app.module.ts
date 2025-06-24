@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   {
     path: 'coffeecloud',
     component: AppLayoutComponent,
+    canActivate: [AuthGuard],
     children:[
       {
         path: 'dashboard',
@@ -50,10 +51,6 @@ const appRoutes: Routes = [
       }
     ]
   },
-  {
-    path: 'logout',
-    component: LoginComponent
-  }
   
 ];
 

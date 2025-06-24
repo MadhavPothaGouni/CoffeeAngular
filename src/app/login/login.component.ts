@@ -22,7 +22,7 @@ export class LoginComponent {
       },
       error: (err) => {
         console.error('Login failed', err);
-        this.loginFailed = true;
+        this.loginFailed = true; 
       }
     });
   }

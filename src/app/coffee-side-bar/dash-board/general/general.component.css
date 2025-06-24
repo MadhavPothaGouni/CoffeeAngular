@@ -34,6 +34,13 @@
 .machine-health {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  height: 115px;
+}
+.healthy-h2{
+  color: #1ab394 !important;
+  padding: 20px;
+  font-weight: 100;
+  font-size: 30px;
 }
 .machine-div {
   display: flex;

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GeneralService } from '../../../general.service';
+
 
 @Component({
   selector: 'app-general',
@@ -7,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './general.component.css'
 })
 export class GeneralComponent {
-
+  HealthStatus = '';
+  constructor(private generalService: GeneralService){}
+  health(){
+    this.generalService.machineHealth('healthstatus')
+  }
 }
