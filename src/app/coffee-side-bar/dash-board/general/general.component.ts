@@ -9,9 +9,6 @@ import { GeneralService } from '../../../general.service';
   styleUrl: './general.component.css'
 })
 export class GeneralComponent {
-  HealthStatus = '';
+  HealthStatus = 'HEALTHY';
   constructor(private generalService: GeneralService){}
-  health(){
-    this.generalService.machineHealth('healthstatus')
-  }
 }
